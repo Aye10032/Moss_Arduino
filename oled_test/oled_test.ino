@@ -27,7 +27,7 @@ void setup() {
 
   status[1] = 0;
   status[5] = 0;
-  smal_lcd_show();
+  oled_show();
 }
 
 void loop() {
@@ -40,10 +40,10 @@ void init_screen() {
   for(int i=0; i<7; i++){
     status[i] = 1;
   }
-  smal_lcd_show();
+  oled_show();
 }
 
-void smal_lcd_show(){
+void oled_show(){
   display.clearDisplay();
   for(int i=0; i<7; i++){
     if (status[i] == 1){
@@ -58,5 +58,5 @@ void random_show(){
   for(int i=0; i<7; i++){
     status[i] = random(2);
   }
-  smal_lcd_show();  
+  oled_show();  
 }
